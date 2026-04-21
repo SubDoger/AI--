@@ -1,0 +1,1 @@
+import{l as e}from"./install-lQ4Hnu7x.js";import{C as t,T as n,b as r,d as i,l as a,p as o,u as s,y as c}from"./icon-ImrTh_4W.js";var l=e([String,Object,Function]),u={Close:o,SuccessFilled:t,InfoFilled:c,WarningFilled:n,CircleCloseFilled:i},d={primary:c,success:t,warning:n,error:i,info:c},f={validating:r,success:a,error:s};export{l as i,d as n,f as r,u as t};

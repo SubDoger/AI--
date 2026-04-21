@@ -1,0 +1,1 @@
+import{i as e,n as t,r as n,t as r}from"./space-BJTEARO_.js";export{r as ElSpace,r as default,e as spaceItemProps,t as spaceProps,n as useSpace};

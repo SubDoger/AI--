@@ -1,0 +1,1 @@
+import{bt as e}from"./vue.runtime.esm-bundler-BacWFOLR.js";import{o as t}from"./src-Ccofv58q.js";var n=e({login_description:`登录管理员后台后可继续管理智能体、知识库与中转配置。`,login_title:`欢迎回来`,site_name:`GrokPlatform`});function r(e){n.value=e,t({app:{name:e.site_name}})}export{r as n,n as t};

@@ -1,0 +1,1 @@
+import{K as e,O as t,b as n,kt as r}from"./vue.runtime.esm-bundler-BacWFOLR.js";import{t as i}from"./objectSpread2-CwpxwSvQ.js";import{t as a}from"./fallback-B3hxWv0w.js";var o=t(i(i({},{name:`Fallback403Demo`}),{},{__name:`forbidden`,setup(t){return(t,i)=>(e(),n(r(a),{status:`403`}))}}));export{o as default};

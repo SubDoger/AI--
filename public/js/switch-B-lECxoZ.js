@@ -1,0 +1,1 @@
+import{n as e,r as t,t as n}from"./switch-CwAIN_z8.js";export{n as ElSwitch,n as default,e as switchEmits,t as switchProps};
