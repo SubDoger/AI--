@@ -1,58 +1,145 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# AI 对话
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  一个面向多模型对话、智能体管理与中转调度的 AI 工作台。
 </p>
 
-## About Laravel
+<p align="center">
+  支持会话管理、模型切换、智能体配置、知识库绑定、管理员后台与中转预设能力。
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 项目简介
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+AI 对话 是一个围绕「对话体验 + 智能体能力 + 中转配置 + 管理控制」构建的完整工作台。
 
-## Learning Laravel
+它适合这些场景：
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- 个人 AI 工作区
+- 多模型统一接入
+- 智能体角色陪伴与专属会话
+- 中转站点管理与密钥轮询
+- 管理员统一维护用户状态与系统配置
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+整个项目更关注“可直接使用的产品体验”，而不仅仅是基础聊天页面。
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## 主要功能
 
-## Agentic Development
+### 对话工作台
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+- 会话列表管理
+- 消息流式输出
+- 思考内容展示与折叠
+- 当前模型动态显示
+- 模型图标展示
+- 多模型切换
+
+### 智能体系统
+
+- 智能体创建与编辑
+- 智能体分组管理
+- 智能体专属会话列表
+- 智能体知识库绑定
+- 多智能体协作模式
+
+### 中转配置
+
+- 中转站点管理
+- 上游模型同步
+- 可用模型绑定
+- 多密钥池轮询
+- 激活线路切换
+- 管理员预设中转提示
+
+### 管理后台
+
+- 系统设置
+- 用户管理
+- 管理员新增用户
+- 用户权限控制
+- 成人偏好开关控制
+- 管理员预设中转分配
+
+## 产品特点
+
+- 页面布局偏工作台风格，适合长时间使用
+- 会话、模型、智能体、中转都围绕实际操作效率设计
+- 管理员与普通用户权限边界清晰
+- 可继续扩展模型设置、知识库、App 同步能力
+
+## 快速开始
+
+### 环境要求
+
+- PHP `8.3+`
+- MySQL `5.7+`
+- Node.js `20.19+` 或 `22+`
+
+### 安装依赖
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+composer install
+npm install
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### 初始化
 
-## Contributing
+```bash
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 开发模式
 
-## Code of Conduct
+```bash
+composer run dev
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 生产构建
 
-## Security Vulnerabilities
+```bash
+npm run build
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 数据库
+
+项目已提供可用的数据库迁移与 SQL 文件，可用于快速初始化环境。
+
+如果需要兼容 MySQL 5.7，建议保留：
+
+- `database/migrations`
+- `database/sql`
+
+## 默认能力方向
+
+当前项目已经围绕这些方向进行了设计：
+
+- 多模型 AI 对话
+- 角色型智能体
+- 知识词库 / 知识库绑定
+- 用户状态同步控制
+- 管理员统一中转策略
+- 后续 App 接入扩展
+
+## 适用人群
+
+- 希望搭建自己的 AI 对话平台的人
+- 希望统一接入多个模型的人
+- 想做智能体角色系统的人
+- 需要用户后台与权限控制的人
+- 想继续扩展移动端或商业化管理能力的人
+
+## 仓库说明
+
+如果你准备继续维护这个项目，建议优先整理这些内容：
+
+- 环境变量示例
+- 敏感密钥清理
+- 依赖目录忽略
+- 生产部署文档
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+如需公开发布或二次分发，请根据你实际使用的资源、模型服务和部署方式，自行补充许可证与合规说明。
